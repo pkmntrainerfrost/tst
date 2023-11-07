@@ -1,0 +1,10 @@
+{"commissionslots": [
+	{"id":1, "userid":1, "slotno":1, "status":"Taken", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Anime", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+	{"id":2, "userid":1, "slotno":2, "status":"Open", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Realistic", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+    {"id":3, "userid":1, "slotno":3, "status":"Closed", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Landscape", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+    {"id":4, "userid":2, "slotno":1, "status":"Open", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Anime", "votes":5,"community":false},{"id":2,"tag":"GenshinImpact", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+    {"id":5, "userid":2, "slotno":2, "status":"Open", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Anime", "votes":5,"community":false},{"id":2,"tag":"GenshinImpact", "votes":5,"community":false},{"id":3,"tag":"HonkaiStarRail", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+    {"id":6, "userid":3, "slotno":1, "status":"Open", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"Anime", "votes":5,"community":false},{"id":2,"tag":"MaimaiDX", "votes":5,"community":false}], "rating":5, "commissionstaken":5},
+    {"id":7, "userid":3, "slotno":2, "status":"Open", "description":"Lorem Ipsum Dolor Sit Amet", "tags":[{"id":1,"tag":"BukanAnime", "votes":5,"community":false}], "rating":5, "commissionstaken":5}
+]
+}
