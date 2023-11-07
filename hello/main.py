@@ -40,10 +40,10 @@ async def read_all_commissionslots(q : str | None = None, t : str | None = None)
 		tags = t.split(" ")
 		filtered_data = []
 		for commissionslot_item in data["commissionslots"]:
-			tags_found = {tags: False for tag in tags}
+			tags_found = {tag: False for tag in tags}
 			for tag in commissionslot_item["tags"]:
-				if tag["name"] in tags_found:
-					tags_found[tag["name"]] = True
+				if tag["tag"] in tags_found:
+					tags_found[tag["tag"]] = True
 			has_tags = all(x == True for x in tags_found.values())
 			if has_tags:
 				filtered_data.append(commissionslot_item)
@@ -102,7 +102,7 @@ async def update_commissionslot(commissionslot: CommissionSlot):
 	)
 
 # Delete commission slot
-@app.delete('/menu/{commissionslot_id}')
+@app.delete('/commissionslots/{commissionslot_id}')
 async def delete_menu(commissionslot_id: int):
 
 	commissionslot_found = False
@@ -134,9 +134,9 @@ async def add_menu(commissionslot_id: int, tag: Tag):
 				if tag_item['id'] == tag_dict['id']:
 					tag_found = True
 					return "Tag with ID "+str(tag_dict['id'])+" exists."
-				elif tag_item['name'] == tag_dict['name']:
+				elif tag_item['tag'] == tag_dict['tag']:
 					tag_found = True
-					return "Tag with name "+tag_dict['name']+" exists."
+					return "Tag with name "+tag_dict['tag']+" exists."
 			if commissionslot_found and not tag_found:
 				data["commissionslots"][commissionslot_idx]["tags"].append(tag_dict)
 				with open(json_filename,"w") as write_file:
@@ -161,9 +161,9 @@ async def add_menu(commissionslot_id: int, tag_id: int, vote: int):
 				if tag_item['id'] == tag_id:
 					tag_found = True
 					if vote == 1:
-						data['commissionslot'][commissionslot_idx]["tag"][tag_idx]["votes"] += 1
+						data['commissionslots'][commissionslot_idx]["tags"][tag_idx]["votes"] += 1
 					elif vote == 0:
-						data['commissionslot'][commissionslot_idx]["tag"][tag_idx]["votes"] -= 1
+						data['commissionslots'][commissionslot_idx]["tags"][tag_idx]["votes"] -= 1
 					else:
 						return "Invalid vote."
 					with open(json_filename,"w") as write_file:
