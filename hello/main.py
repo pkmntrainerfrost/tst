@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class Tag(BaseModel):
 	id: int
-	name: str
+	tag: str
 	votes: int
 	community: bool
 
