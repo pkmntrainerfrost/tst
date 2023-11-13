@@ -1,0 +1,18 @@
+[
+    {
+        "commissionslot_id" : 0,
+        "user_id"           : 1,
+        "slot_no"           : 0,
+        "status"            : "Open",
+        "description"       : "",
+        "tags"              : [
+                                {"tag_no" : 0, "tag_name" : "anime", "votes" : 0, "community" : false}
+                              ],
+        "community_tags"    : true,
+        "commissions"       : 0,
+        "rating"            : 0
+    }, 
+    {
+
+    }
+]
