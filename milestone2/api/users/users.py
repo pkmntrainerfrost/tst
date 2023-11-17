@@ -52,3 +52,11 @@ def get_user(db, user_id: int):
     if user_id in db:
         user_dict = db[user_id]
         return UserInDB(**user_dict)
+    
+def authenticate_user(data, username: str, password: str):
+    user = get_user(data, username)
+    if not user:
+        return False
+    if not verify_password(password, user.hashed_password):
+        return False
+    return user
